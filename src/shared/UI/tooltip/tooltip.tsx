@@ -10,6 +10,7 @@ type TooltipProps = {
 
 export const Tooltip:FC<TooltipProps> = ({children, text}) => {
     const containerRef = useRef<HTMLDivElement| null>(null)
+    const contentRef = useRef<HTMLDivElement| null>(null)
     const [isHovered, setIsHovered] = useState(false)
 
 
@@ -22,22 +23,21 @@ export const Tooltip:FC<TooltipProps> = ({children, text}) => {
     }
 
     const handleMouseMove:MouseEventHandler<HTMLDivElement> = (e) => {
-        const posX = `${e.clientX}px`;
-        const posY = `${e.clientY}px`;
-        console.log(posX, posY)
-        if(containerRef.current){
-            containerRef.current.style.top = posY;
-            containerRef.current.style.left = posX;
+        if(containerRef.current && contentRef.current){
+            const posX = `${e.clientX - containerRef.current.offsetLeft + 20}px`;
+            const posY = `${e.clientY - containerRef.current.offsetTop + 20}px`;
+            contentRef.current.style.top = posY;
+            contentRef.current.style.left = posX;
         }
     }
 
     return(
-        <div onMouseEnter={handleMouseEnter} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={styles.tooltip}>
+        <div onMouseEnter={handleMouseEnter} ref={containerRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={styles.tooltip}>
             {children}
             <div className={clsx(styles.tooltip__content, {
                 [styles.tooltip__visible]: isHovered
             })}
-            ref={containerRef}
+            ref={contentRef}
             >{text}</div>
         </div>
     )
