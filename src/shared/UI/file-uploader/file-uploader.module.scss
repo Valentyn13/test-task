@@ -1,0 +1,52 @@
+.wrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.file_btn {
+  flex-basis: 83px;
+  padding: 13px;
+  min-height: 54px;
+  text-align: center;
+  color: #000000de;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 4px 0px 0px 4px;
+  border: 1px solid #000000de;
+  background: transparent;
+
+  &__error{
+    border: 2px solid #CB3D40;
+  }
+}
+
+.selected_file {
+  flex-basis: 245px;
+  flex-shrink: 0;
+  min-height: 54px;
+  padding: 13px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #7e7e7e;
+  border: 1px solid #D0CFCF;
+  background: transparent;
+  border-radius: 0px 4px 4px 0px;
+  border-left: none;
+
+    &__error{
+        border: 2px solid #CB3D40;
+        border-left: none;
+    }
+  span{
+    color: #000000de;
+  }
+}
+
+.errorText{
+    position: absolute;
+    left: 16px;
+    bottom: -14px;
+    color:#CB3D40;
+    font-size: 12px;
+    line-height: 14px;
+}

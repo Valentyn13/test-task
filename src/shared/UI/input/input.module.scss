@@ -1,0 +1,59 @@
+.wrapper {
+  display: inline-block;
+}
+body {
+  padding: 20px;
+}
+
+.fieldset {
+  position: relative;
+  border-width: 1px;
+  border-style: groove;
+  border-color: #d0cfcf;
+  border-image: initial;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 14px 16px;
+  &__error {
+    border-color: #cb3d40;
+    color: #cb3d40;
+  }
+  legend{
+    display: none;
+  }
+}
+.labelExists{
+    padding: 9px 16px 14px 16px
+}
+.legend__focused{
+    display: block !important;
+}
+.input {
+  font-family: "Nunito", sans-serif;
+  background-color: transparent;
+  line-height: 26px;
+  font-size: 16px;
+
+  color: #000000de;
+
+  &::placeholder {
+    color: #7e7e7e;
+  }
+
+}
+
+.label {
+}
+
+.helperText {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7e7e7e;
+  padding: 0 0 0 16px;
+
+  &__error {
+    color: #cb3d40;
+  }
+}

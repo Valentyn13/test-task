@@ -1,0 +1,26 @@
+.button {
+    border-radius: 80px;
+    padding: 4px 28px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #000000DE;
+
+    &__yellow{
+        background-color: var(--yellow-primary);
+
+        &:hover{
+            background-color: var(--yellow-hover);
+        }
+    }
+
+    &__blue{
+        background-color: var(--color-secondary-blue);
+    }
+
+    &__disabled{
+        background-color: var(--color-disabled);
+        color: #FFFFFFDE;
+        
+    }
+}
+

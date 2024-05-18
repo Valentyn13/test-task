@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #000000DE;
+}
+
+
+.radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border: 1px solid gray;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    appearance: none;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:checked {
+        border-color: #00BDD3;
+    }
+
+    &:checked::after {
+        background-color: #00BDD3;
+        opacity: 1;
+    }
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
