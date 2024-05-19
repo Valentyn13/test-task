@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean;
+  errorText?: string;
   className?: string;
   helperText?: string;
   label?: string;
@@ -13,6 +14,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input: FC<InputProps> = ({
   hasError = false,
   helperText = "",
+  errorText = "",
   label = "",
   className = "",
   onChange,
@@ -52,7 +54,7 @@ export const Input: FC<InputProps> = ({
             [styles.helperText__error]: hasError,
           })}
         >
-          {helperText}
+          {helperText || errorText}
         </p>
     </div>
   );

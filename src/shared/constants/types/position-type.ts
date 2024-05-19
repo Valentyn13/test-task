@@ -1,0 +1,1 @@
+export type Positions = 'Security' | 'Designer' | 'Content manager' | 'Frontend developer' | 'Backend developer' | 'QA'
