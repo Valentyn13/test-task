@@ -1,4 +1,4 @@
-import { Positions } from "./position-type";
+import { Positions } from "../enums/positions-enum";
 
 export type User = {
     id: string,

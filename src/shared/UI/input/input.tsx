@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, InputHTMLAttributes, useState } from "react";
+import { ChangeEvent, InputHTMLAttributes, forwardRef, useState } from "react";
 import styles from "./input.module.scss";
 import clsx from "clsx";
 
@@ -11,15 +11,20 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input: FC<InputProps> = ({
-  hasError = false,
-  helperText = "",
-  errorText = "",
-  label = "",
-  className = "",
-  onChange,
-  ...otherProperties
-}) => {
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  (
+      {
+        hasError = false,
+        helperText = "",
+        errorText = "",
+        label = "",
+        className = "",
+        onChange,
+        ...otherProperties
+      },
+      reference,
+  ) => {
+
     const [isFocused, setIsFocused] = useState(false)
     const onFocus = () => {
         setIsFocused(true)
@@ -27,8 +32,11 @@ export const Input: FC<InputProps> = ({
     const onBlur = () => {
         setIsFocused(false)
     }
-  return (
-    <div className={styles.wrapper}>
+
+
+
+    return(
+      <div className={ clsx(styles.wrapper,className)}>
       <fieldset className={clsx(styles.fieldset,{
         [styles.fieldset__error]: hasError,
         [styles.labelExists]: label && isFocused,
@@ -42,10 +50,9 @@ export const Input: FC<InputProps> = ({
           onChange={onChange}
          onFocus={onFocus}
          onBlur={onBlur}
+         ref={reference}
           className={clsx(
             styles.input,
-
-            className
           )}
         />
       </fieldset>
@@ -57,5 +64,12 @@ export const Input: FC<InputProps> = ({
           {helperText || errorText}
         </p>
     </div>
-  );
-};
+    )
+
+  },
+);
+
+Input.displayName = 'Input';
+
+
+export { Input };

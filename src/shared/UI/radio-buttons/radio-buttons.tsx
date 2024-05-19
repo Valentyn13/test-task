@@ -1,22 +1,28 @@
-import { FC } from 'react';
+import { InputHTMLAttributes, forwardRef } from 'react';
 import styles from './radio-button.module.scss'
 import clsx from 'clsx';
 
-type RadioButtonProps = {
+interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement>{
     label: string;
-    checked?: boolean;
     className?: string;
 }
 
-export const RadioButton:FC<RadioButtonProps> = ({label = '', checked = false, className}) => {
-    return (
-        <label className={clsx(styles.container, className)}>
-            <input
-                type="radio"
-                className={styles.radio}
-                defaultChecked={checked}
-            />
-            <span className={styles.text}>{label}</span>
-        </label>
-    )
-}
+const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(({
+    label = '',
+    className = '',
+    ...otherProperties
+}, reference) =>(
+    <label className={clsx(styles.container, className)}>
+    <input
+        {...otherProperties}
+        type="radio"
+        ref={reference}
+        className={styles.radio}
+    />
+    <span className={styles.text}>{label}</span>
+</label>
+))
+
+RadioButton.displayName = 'RadioButton'
+
+export { RadioButton }

@@ -1,29 +1,29 @@
 import clsx from "clsx";
-import { FC, MouseEventHandler, ReactNode } from "react";
+import { ButtonHTMLAttributes, FC, MouseEventHandler, ReactNode } from "react";
 
 import { ButtonTypes } from "../../constants/enums/button-enum";
 
 import styles from "./button.module.scss";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   disabled?: boolean;
-  type?: ButtonTypes;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  variant?: ButtonTypes;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   className?: string;
 }
 
 export const Button: FC<ButtonProps> = ({
   children,
   disabled = false,
-  type = ButtonTypes.YELLOW,
+  variant = ButtonTypes.YELLOW,
   onClick,
   className = '',
 }) => {
   return <button
   className={clsx(styles.button,{
-    [styles.button__yellow]: type === ButtonTypes.YELLOW && !disabled,
-    [styles.button__blue]: type === ButtonTypes.BLUE,
+    [styles.button__yellow]: variant === ButtonTypes.YELLOW && !disabled,
+    [styles.button__blue]: variant === ButtonTypes.BLUE,
     [styles.button__disabled]: disabled,
   }, className)}
     disabled={disabled}

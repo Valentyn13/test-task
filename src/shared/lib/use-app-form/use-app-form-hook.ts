@@ -2,6 +2,7 @@ import { joiResolver } from "@hookform/resolvers/joi";
 import type { Schema as ValidationSchema } from "joi";
 import {
   DefaultValues,
+  UseFormRegister,
   type Control,
   type DeepPartial,
   type FieldErrors,
@@ -23,6 +24,7 @@ type Parameters<T extends FieldValues = FieldValues> = {
 
 type ReturnValue<T extends FieldValues = FieldValues> = {
   control: Control<T, null>;
+  register: UseFormRegister<T>
   errors: FieldErrors<T>;
   isValid: boolean;
   handleSubmit: UseFormHandleSubmit<T>;
@@ -39,6 +41,7 @@ const useAppForm = <T extends FieldValues = FieldValues>({
 }: Parameters<T>): ReturnValue<T> => {
   const {
     control,
+    register,
     handleSubmit,
     reset,
     watch,
@@ -53,6 +56,7 @@ const useAppForm = <T extends FieldValues = FieldValues>({
 
   return {
     control,
+    register,
     isValid,
     errors,
     handleSubmit,

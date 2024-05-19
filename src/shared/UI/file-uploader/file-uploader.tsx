@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 interface FileUploaderProps extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
-  onFileLoad: (file: File) => void;
+  onFileLoad: (file:File) => void;
   className?: string;
   hasError?: boolean;
   errorText?: string;
@@ -34,7 +34,7 @@ export const FileUploader: FC<FileUploaderProps> = ({
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={clsx(styles.wrapper,className) }>
       <input
         type="file"
         onChange={handleFileChange}
@@ -42,9 +42,10 @@ export const FileUploader: FC<FileUploaderProps> = ({
         style={{ display: "none" }}
       />
       <button
+        type="button"
         className={clsx(styles.file_btn,{
             [styles.file_btn__error]: hasError,
-        }, className)}
+        })}
         onClick={onChooseFile}
       >
         Upload

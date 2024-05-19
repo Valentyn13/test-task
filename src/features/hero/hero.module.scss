@@ -1,0 +1,32 @@
+.hero {
+    position: relative;
+height: 650px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #FFF;
+}
+
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+
+}
+
+.header_margin{
+    margin: 0 0 21px 0;
+}
+
+.paragraph_margin{
+    margin: 0 0 32px 0;
+}
+
+.text_container{
+    max-width: 380px;
+}
