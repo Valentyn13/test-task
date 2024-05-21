@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #000000de;
+    color: var( --color-black);
 }
 
 .radio {
@@ -10,7 +10,7 @@
     width: 20px;
     height: 20px;
     margin: 0;
-    border: 1px solid gray;
+    border: 1px solid var(--border-gray);
     border-radius: 50%;
     outline: none;
     cursor: pointer;
@@ -24,7 +24,7 @@
         left: 4px;
         width: 10px;
         height: 10px;
-        background-color: gray;
+        background-color: var(--border-gray);
         border-radius: 50%;
         opacity: 0;
         transition: opacity 0.3s;

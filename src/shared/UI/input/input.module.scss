@@ -1,5 +1,6 @@
 .wrapper {
     display: inline-block;
+    color: var(--color-text-gray);
     font-size: var(--font-size-small);
     line-height: var(--line-height-small);
 }
@@ -9,13 +10,13 @@
     padding: 14px 16px;
     border-width: 1px;
     border-style: groove;
-    border-color: #d0cfcf;
+    border-color: var(--border-gray);
     border-radius: 4px;
     border-image: initial;
 
     &__error {
-        color: #cb3d40;
-        border-color: #cb3d40;
+        color: var(--color-error);
+        border-color: var(--color-error);
     }
 }
 
@@ -32,21 +33,20 @@
 }
 
 .input {
-    color: #000000de;
+    color: var( --color-black);
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
     background-color: transparent;
 
     &::placeholder {
-        color: #7e7e7e;
+        color: var(--color-text-gray);
     }
 }
 
 .helperText {
     padding: 0 0 0 16px;
-    color: #7e7e7e;
 
     &__error {
-        color: #cb3d40;
+        color:var(--color-error);
     }
 }
