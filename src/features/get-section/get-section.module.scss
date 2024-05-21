@@ -1,0 +1,43 @@
+.getSection {
+    margin-top: 140px !important;
+
+    &__headerText {
+        margin: 0 0 50px 0;
+        text-align: center;
+    }
+
+    &__layout{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 254px;
+        grid-auto-rows: 254px;
+        gap: 29px;
+        margin: 0 0 50px 0;
+    }
+
+    &__controll {
+        display: block;
+        margin:  0 auto;
+    }
+}
+
+@media (max-width: 769px) {
+    .getSection {
+        padding: 0 32px;
+        &__layout{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .getSection {
+        padding: 0 16px;
+        &__layout{
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            gap: 20px
+        }
+    }
+}

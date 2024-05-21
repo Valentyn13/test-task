@@ -11,8 +11,9 @@ import { useFormFieldCreator } from "../../shared/lib/use-form-field/use-form-fi
 
 type RegistrationFormProps = {
   onSubmit: (payload: UserSignUpJoiDto) => void;
+  className?: string;
 };
-export const RegistrationForm: FC<RegistrationFormProps> = ({ onSubmit }) => {
+export const RegistrationForm: FC<RegistrationFormProps> = ({ onSubmit, className = '' }) => {
   const { control, handleSubmit } = useAppForm<UserSignUpJoiDto>({
     defaultValues: DEFAULT_SIGN_UP_PAYLOAD,
     validationSchema: userSignUpValidationShema,
@@ -37,8 +38,7 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className={clsx(styles.wrapper, "_container")}>
-      Registration Form
+    <div className={clsx(styles.wrapper, className)}>
       <form onSubmit={handleFormSubmit} className={styles.registration}>
         <Input
           type="text"

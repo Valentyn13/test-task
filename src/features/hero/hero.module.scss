@@ -1,12 +1,17 @@
-.hero {
+.hero{
     position: relative;
-height: 650px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-color: #FFF;
+    &__content {
+        
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    }
+
 }
+
 
 .mask{
     position: absolute;

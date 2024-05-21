@@ -6,8 +6,9 @@ import { Button } from "../../shared";
 
 export const Hero = () => {
   return (
-    <section className={clsx(styles.hero, '_container')}>
+    <section className={styles.hero}>
       <img className={clsx("_ibg")} src={HeroImage} alt="hero-image" />
+      <div className={ clsx(styles.hero__content,"_container")}>
       <div className={styles.mask}></div>
       <HeaderText className={clsx(styles.text_container, styles.header_margin) }>Test assignment for front-end developer</HeaderText>
       <p className={clsx(styles.text_container, styles.paragraph_margin) }>
@@ -19,6 +20,8 @@ export const Hero = () => {
       </p>
 
       <Button onClick={() =>{}}>Sign Up</Button>
+      </div>
+
     </section>
   );
 };
