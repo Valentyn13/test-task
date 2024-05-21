@@ -48,6 +48,8 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({
                 <Input
                     type="text"
                     placeholder="Your name"
+                    helperText='sdfsdfs'
+                    label='aaaa'
                     {...useFormFieldCreator({ name: 'name', control })}
                     className={styles.registration__name}
                 />

@@ -15,6 +15,12 @@
     outline: none;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
 a:focus,
 a:active {
     outline: none;
@@ -26,9 +32,9 @@ body {
 }
 
 body {
-    font-size: medium;
-    font-family: Nunito, sans-serif;
-    line-height: 1;
+    font-size: var(--font-size-body);
+    font-family: var(--font-family);
+    line-height: var(--line-height-body);
     background-color: var(--color-background);
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -39,6 +45,7 @@ input,
 button,
 textarea {
     font-size: inherit;
+    font-family: inherit;
     line-height: inherit;
 }
 
@@ -46,11 +53,6 @@ button {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
 }
 
 ul li {
@@ -69,14 +71,10 @@ h5,
 h6 {
     font-weight: inherit;
     font-size: inherit;
+    font-family: inherit;
 }
 
-._container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-._ibg {
+.ibg {
     position: absolute;
     top: 0;
     left: 0;
@@ -86,7 +84,7 @@ h6 {
     object-fit: cover;
 }
 
-._ibgc {
+.ibgc {
     position: absolute;
     top: 0;
     left: 0;
@@ -96,30 +94,30 @@ h6 {
     object-fit: contain;
 }
 
-._polotno {
+.polotno {
     max-width: 1440px;
     margin: 0 auto;
 }
 
-._container {
+.container {
     max-width: 1170px;
     margin: 0 auto;
 }
 
 @media (width <= 1024px) {
-    ._container {
+    .container{
         max-width: 904px;
     }
 }
 
 @media (width <= 768px) {
-    ._container {
+    .container{
         max-width: 704px;
     }
 }
 
 @media (width <= 360px) {
-    ._container {
+    .container {
         max-width: 328px;
     }
 }

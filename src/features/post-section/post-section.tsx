@@ -11,7 +11,7 @@ export const PostSection = () => {
 
     return (
         <section className={styles.postSection}>
-            <div className="_container">
+            <div className="container">
                 <HeaderText className={styles.postSection__headerText}>
                     Working with POST request
                 </HeaderText>

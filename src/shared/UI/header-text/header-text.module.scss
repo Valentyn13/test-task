@@ -1,6 +1,5 @@
 .text {
     font-weight: 400;
-    font-size: 40px;
-    font-family: Nunito, sans-serif;
-    line-height: 40px;
+    font-size: var(--font-size-header);
+    line-height: var(--line-height-header);
 }

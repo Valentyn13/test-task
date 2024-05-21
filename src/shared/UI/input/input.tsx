@@ -41,7 +41,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                     })}
                 >
                     <legend
-                        className={clsx({
+                        className={clsx(styles.legend,{
                             [styles.legend__focused]: isFocused,
                         })}
                     >

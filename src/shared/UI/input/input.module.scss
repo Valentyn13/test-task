@@ -1,12 +1,12 @@
 .wrapper {
     display: inline-block;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
 }
 
 .fieldset {
     position: relative;
     padding: 14px 16px;
-    font-size: 12px;
-    line-height: 14px;
     border-width: 1px;
     border-style: groove;
     border-color: #d0cfcf;
@@ -17,25 +17,24 @@
         color: #cb3d40;
         border-color: #cb3d40;
     }
-
-    legend {
-        display: none;
-    }
 }
 
 .labelExists {
     padding: 9px 16px 14px;
 }
 
-.legend__focused {
+.legend {
+  display: none;
+  
+  &__focused {
     display: block !important;
+}
 }
 
 .input {
     color: #000000de;
-    font-size: 16px;
-    font-family: Nunito, sans-serif;
-    line-height: 26px;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
     background-color: transparent;
 
     &::placeholder {
@@ -46,9 +45,6 @@
 .helperText {
     padding: 0 0 0 16px;
     color: #7e7e7e;
-    font-size: 12px;
-    font-family: Nunito, sans-serif;
-    line-height: 14px;
 
     &__error {
         color: #cb3d40;

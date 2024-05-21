@@ -43,7 +43,7 @@ export const FileUploader: FC<FileUploaderProps> = ({
             />
             <button
                 type="button"
-                className={clsx(styles.file_btn, {
+                className={clsx(styles.fileBtn, {
                     [styles.file_btn__error]: hasError,
                 })}
                 onClick={onChooseFile}
@@ -51,7 +51,7 @@ export const FileUploader: FC<FileUploaderProps> = ({
                 Upload
             </button>
             <div
-                className={clsx(styles.selected_file, {
+                className={clsx(styles.selectedFile, {
                     [styles.selected_file__error]: hasError,
                 })}
             >
@@ -63,7 +63,7 @@ export const FileUploader: FC<FileUploaderProps> = ({
                     )}
                 </p>
             </div>
-            {hasError && <p className={styles.errorText}>{errorText}</p>}
+            {hasError && <p className={styles.errorText}>{errorText}sdf</p>}
         </div>
     );
 };

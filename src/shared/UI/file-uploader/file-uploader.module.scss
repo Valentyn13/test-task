@@ -3,13 +3,11 @@
     display: inline-flex;
 }
 
-.file_btn {
+.fileBtn {
     flex-basis: 83px;
     min-height: 54px;
     padding: 13px;
     color: #000000de;
-    font-size: 16px;
-    line-height: 26px;
     text-align: center;
     background: transparent;
     border: 1px solid #000000de;
@@ -20,14 +18,12 @@
     }
 }
 
-.selected_file {
+.selectedFile {
     flex-shrink: 0;
     flex-basis: 245px;
     min-height: 54px;
     padding: 13px;
     color: #7e7e7e;
-    font-size: 16px;
-    line-height: 26px;
     background: transparent;
     border: 1px solid #d0cfcf;
     border-left: none;
@@ -48,6 +44,6 @@
     bottom: -14px;
     left: 16px;
     color: #cb3d40;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
 }

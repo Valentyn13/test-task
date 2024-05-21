@@ -20,7 +20,7 @@ const USER: User = {
 export const GetSection: FC = () => {
     return (
         <section className={styles.getSection}>
-            <div className="_container">
+            <div className="container">
                 <HeaderText className={styles.getSection__headerText}>
                     Working with GET request
                 </HeaderText>
