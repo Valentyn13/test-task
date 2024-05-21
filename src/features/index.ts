@@ -1,1 +1,1 @@
-export { RegistrationForm } from './registration-form/index.tsx';
+export { RegistrationForm } from './registration-form/index.ts';
