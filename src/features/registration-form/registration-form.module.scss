@@ -1,33 +1,35 @@
 .wrapper {
-padding:  0 0 100px 0;
+    padding: 0 0 100px;
 }
 
 .registration {
     display: flex;
     flex-direction: column;
-    max-width:380px;
+    max-width: 380px;
     margin: 0 auto;
 
-    &__name, &__email {
-        margin: 0 0 50px 0;
+    &__name,
+    &__email {
+        margin: 0 0 50px;
     }
 
     &__phone {
-        margin: 0 0 29px 0;
+        margin: 0 0 29px;
     }
 
     &__file {
-        margin: 0 0 50px 0;
+        margin: 0 0 50px;
     }
 
     &__radio {
-        margin: 0 0 47px 0;
+        margin: 0 0 47px;
+
         &_topic {
-            margin: 0 0 11px 0;
+            margin: 0 0 11px;
         }
 
         label {
-            margin: 0 0 7px 0;
+            margin: 0 0 7px;
         }
     }
 

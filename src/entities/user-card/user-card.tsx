@@ -1,14 +1,16 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
-import { User, Avatar } from '../../shared/index.ts'
+import { User, Avatar } from '../../shared/index.ts';
 
-import styles from './user-card.module.scss'
+import styles from './user-card.module.scss';
 
 type UserCardProps = {
-    user: User
-}
+    user: User;
+};
 
-export const UserCard:FC<UserCardProps> =({user:{name, position, email, phone, photo}}) => {
+export const UserCard: FC<UserCardProps> = ({
+    user: { name, position, email, phone, photo },
+}) => {
     return (
         <div className={styles.card}>
             <div className={styles.card__content}>
@@ -22,5 +24,5 @@ export const UserCard:FC<UserCardProps> =({user:{name, position, email, phone, p
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

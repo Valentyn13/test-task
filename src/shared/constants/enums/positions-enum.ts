@@ -4,5 +4,5 @@ export enum Positions {
     CONTENT_MANAGER = 'Content manager',
     FRONTEND_DEVELOPER = 'Frontend developer',
     BACKEND_DEVELOPER = 'Backend developer',
-    QA = 'QA'
+    QA = 'QA',
 }

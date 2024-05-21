@@ -1,52 +1,53 @@
 .wrapper {
-  display: inline-flex;
-  position: relative;
+    position: relative;
+    display: inline-flex;
 }
 
 .file_btn {
-  flex-basis: 83px;
-  padding: 13px;
-  min-height: 54px;
-  text-align: center;
-  color: #000000de;
-  font-size: 16px;
-  line-height: 26px;
-  border-radius: 4px 0px 0px 4px;
-  border: 1px solid #000000de;
-  background: transparent;
+    flex-basis: 83px;
+    min-height: 54px;
+    padding: 13px;
+    color: #000000de;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #000000de;
+    border-radius: 4px 0 0 4px;
 
-  &__error{
-    border: 2px solid #CB3D40;
-  }
+    &__error {
+        border: 2px solid #cb3d40;
+    }
 }
 
 .selected_file {
-  flex-basis: 245px;
-  flex-shrink: 0;
-  min-height: 54px;
-  padding: 13px;
-  font-size: 16px;
-  line-height: 26px;
-  color: #7e7e7e;
-  border: 1px solid #D0CFCF;
-  background: transparent;
-  border-radius: 0px 4px 4px 0px;
-  border-left: none;
+    flex-shrink: 0;
+    flex-basis: 245px;
+    min-height: 54px;
+    padding: 13px;
+    color: #7e7e7e;
+    font-size: 16px;
+    line-height: 26px;
+    background: transparent;
+    border: 1px solid #d0cfcf;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
 
-    &__error{
-        border: 2px solid #CB3D40;
+    &__error {
+        border: 2px solid #cb3d40;
         border-left: none;
     }
-  span{
-    color: #000000de;
-  }
+
+    span {
+        color: #000000de;
+    }
 }
 
-.errorText{
+.errorText {
     position: absolute;
-    left: 16px;
     bottom: -14px;
-    color:#CB3D40;
+    left: 16px;
+    color: #cb3d40;
     font-size: 12px;
     line-height: 14px;
 }

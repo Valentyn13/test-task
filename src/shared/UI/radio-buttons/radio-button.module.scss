@@ -2,10 +2,9 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    color: #000000de;
     font-size: 16px;
-    color: #000000DE;
 }
-
 
 .radio {
     position: relative;
@@ -33,11 +32,11 @@
     }
 
     &:checked {
-        border-color: #00BDD3;
+        border-color: #00bdd3;
     }
 
     &:checked::after {
-        background-color: #00BDD3;
+        background-color: #00bdd3;
         opacity: 1;
     }
 }

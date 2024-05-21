@@ -1,9 +1,8 @@
-
 // import { UserCard } from '../entities/user-card/user-card'
-import { GetSection } from '../features/get-section/get-section'
-import { Header } from '../features/header/header'
-import { Hero } from '../features/hero/hero'
-import { PostSection } from '../features/post-section/post-section'
+import { GetSection } from '../features/get-section/get-section';
+import { Header } from '../features/header/header';
+import { Hero } from '../features/hero/hero';
+import { PostSection } from '../features/post-section/post-section';
 // import { RegistrationForm } from '../features/registration-form/registration-form'
 // import { User } from '../shared'
 // import { Avatar } from '../shared/UI/avatar/avatar'
@@ -16,7 +15,7 @@ import { PostSection } from '../features/post-section/post-section'
 // import { Positions } from '../shared/constants/enums/positions-enum'
 // import { UserSignUpJoiDto } from '../shared/constants/types/user-sign-up-joi-request-dto'
 // import { UserSignUpRequestDto } from '../shared/constants/types/user-sign-up-request-dto'
-import './styles/index.scss'
+import './styles/index.scss';
 
 // const USER: User = {
 //   id: '1',
@@ -29,17 +28,15 @@ import './styles/index.scss'
 //   photo:"https://randomuser.me/api/portraits/men/43.jpg"
 // }
 
-
 function App() {
+    return (
+        <>
+            <Header />
+            <Hero />
+            <GetSection />
+            <PostSection />
 
-  return (
-    <>
-    <Header/>
-    <Hero/>
-    <GetSection/>
-    <PostSection/>
-
-      {/* <Button onClick={handleClick}>Save</Button>
+            {/* <Button onClick={handleClick}>Save</Button>
       <Button variant={ButtonTypes.BLUE} onClick={handleClick}>Save</Button>
       <Button disabled onClick={handleClick}>Save</Button>
       <Input onChange={() => {}} label='sdfsdf' placeholder='Label'/>
@@ -62,8 +59,8 @@ function App() {
       <br />
       <br />
       <UserCard user={USER}/> */}
-    </>
-  )
+        </>
+    );
 }
 
-export default App
+export default App;

@@ -1,16 +1,16 @@
-import styles from './avatar.module.scss'
-import defaultImage from './../../../assets/photo-cover.svg'
+import styles from './avatar.module.scss';
+import defaultImage from './../../../assets/photo-cover.svg';
 
-import { FC } from 'react'
+import { FC } from 'react';
 
 type AvatarProps = {
-    image?: string
-}
+    image?: string;
+};
 
-export const Avatar:FC<AvatarProps> = ({image}) => {
+export const Avatar: FC<AvatarProps> = ({ image }) => {
     return (
         <div className={styles.avatar}>
-        <img src={image || defaultImage} alt="avatar" />
+            <img src={image || defaultImage} alt="avatar" />
         </div>
-    )
-}
+    );
+};
