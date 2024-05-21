@@ -31,11 +31,11 @@
     }
 
     &:checked {
-        border-color: #00bdd3;
+        border-color: var(--color-light-blue);
     }
 
     &:checked::after {
-        background-color: #00bdd3;
+        background-color: var(--color-light-blue);
         opacity: 1;
     }
 }
