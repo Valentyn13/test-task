@@ -1,4 +1,4 @@
-import { Header, Hero, GetSection, PostSection } from "../../widgets";
+import { Header, Hero, GetSection, PostSection } from '../../widgets';
 
 export const MainPage = () => {
     return (
@@ -9,4 +9,4 @@ export const MainPage = () => {
             <PostSection />
         </>
     );
-}
+};

@@ -1,1 +1,1 @@
-export {UserCard} from './user-card/user-card.tsx';
+export { UserCard } from './user-card/user-card.tsx';

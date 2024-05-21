@@ -1,6 +1,15 @@
 import clsx from 'clsx';
 import styles from './registration-form.module.scss';
-import { Button, FileUploader, Input, Positions, RadioButton, useAppForm, useFormFieldCreator, type UserSignUpJoiDto } from '../../../shared';
+import {
+    Button,
+    FileUploader,
+    Input,
+    Positions,
+    RadioButton,
+    useAppForm,
+    useFormFieldCreator,
+    type UserSignUpJoiDto,
+} from '../../../shared';
 import { DEFAULT_SIGN_UP_PAYLOAD } from '../constants/default-sign-up-payload';
 import { userSignUpValidationShema } from '../lib/user-sign-up-validation-shema';
 import { ChangeEventHandler, FC, useState } from 'react';

@@ -1,1 +1,1 @@
-export {RegistrationForm} from './UI/registration-form.tsx';
+export { RegistrationForm } from './UI/registration-form.tsx';
