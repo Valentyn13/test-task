@@ -7,10 +7,10 @@
     flex-basis: 83px;
     min-height: 54px;
     padding: 13px;
-    color: var( --color-black);
+    color: var(--color-black);
     text-align: center;
     background: transparent;
-    border: 1px solid var( --color-black);
+    border: 1px solid var(--color-black);
     border-radius: 4px 0 0 4px;
 
     &__error {
@@ -35,7 +35,7 @@
     }
 
     span {
-        color: var( --color-black);
+        color: var(--color-black);
     }
 }
 

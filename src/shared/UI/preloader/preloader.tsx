@@ -1,8 +1,15 @@
+import clsx from 'clsx';
+import { FC } from 'react';
+
 import styles from './preloader.module.scss';
 
-export const Preloader = () => {
+type PreloaderProps = {
+    className?: string;
+};
+
+export const Preloader: FC<PreloaderProps> = ({ className = '' }) => {
     return (
-        <div className={styles.preloader}>
+        <div className={clsx(styles.preloader, className)}>
             <span className={styles.preloader__spiner}></span>
         </div>
     );

@@ -1,6 +1,7 @@
-import { InputHTMLAttributes, forwardRef } from 'react';
-import styles from './radio-button.module.scss';
 import clsx from 'clsx';
+import { InputHTMLAttributes, forwardRef } from 'react';
+
+import styles from './radio-button.module.scss';
 
 interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
     label: string;

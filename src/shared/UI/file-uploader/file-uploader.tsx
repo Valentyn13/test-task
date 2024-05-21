@@ -1,6 +1,7 @@
-import { FC, InputHTMLAttributes, useRef, useState } from 'react';
-import styles from './file-uploader.module.scss';
 import clsx from 'clsx';
+import { FC, InputHTMLAttributes, useRef, useState } from 'react';
+
+import styles from './file-uploader.module.scss';
 
 interface FileUploaderProps extends InputHTMLAttributes<HTMLInputElement> {
     placeholder?: string;

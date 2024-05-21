@@ -1,10 +1,9 @@
 import { FC } from 'react';
-import { HeaderText } from '../../shared/UI/header-text/header-text';
-import { Button, User } from '../../shared';
+
+import { UserCard } from '../../entities';
+import { Button, HeaderText, Positions, User } from '../../shared';
 
 import styles from './get-section.module.scss';
-import { UserCard } from '../../entities/user-card/user-card';
-import { Positions } from '../../shared/constants/enums/positions-enum';
 
 const USER: User = {
     id: '1',

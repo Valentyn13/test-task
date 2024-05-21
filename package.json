@@ -9,7 +9,7 @@
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "lint:prettier": "prettier --write \"**/*.{ts,tsx,json,md,scss,html,yml}\"",
-        "lint:styles":"npx stylelint \"**/*.scss\" --fix\""
+        "lint:styles": "npx stylelint \"**/*.scss\" --fix\""
     },
     "dependencies": {
         "-": "^0.0.1",

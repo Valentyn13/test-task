@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import styles from './hero.module.scss';
-import { HeaderText } from '../../shared/UI/header-text/header-text';
+
+import { Button, HeaderText } from '../../shared';
+
 import HeroImage from '../../assets/hero.jpeg';
-import { Button } from '../../shared';
+import styles from './hero.module.scss';
 
 export const Hero = () => {
     return (

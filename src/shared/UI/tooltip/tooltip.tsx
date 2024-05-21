@@ -1,6 +1,7 @@
-import { FC, MouseEventHandler, useRef, useState } from 'react';
-import styles from './tooltip.module.scss';
 import clsx from 'clsx';
+import { FC, MouseEventHandler, useRef, useState } from 'react';
+
+import styles from './tooltip.module.scss';
 
 type TooltipProps = {
     children: JSX.Element | string;

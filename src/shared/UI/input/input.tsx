@@ -1,6 +1,7 @@
-import { ChangeEvent, InputHTMLAttributes, forwardRef, useState } from 'react';
-import styles from './input.module.scss';
 import clsx from 'clsx';
+import { ChangeEvent, InputHTMLAttributes, forwardRef, useState } from 'react';
+
+import styles from './input.module.scss';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     hasError?: boolean;
@@ -41,7 +42,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                     })}
                 >
                     <legend
-                        className={clsx(styles.legend,{
+                        className={clsx(styles.legend, {
                             [styles.legend__focused]: isFocused,
                         })}
                     >

@@ -1,19 +1,11 @@
-import { GetSection } from '../features/get-section/get-section';
-import { Header } from '../features/header/header';
-import { Hero } from '../features/hero/hero';
-import { PostSection } from '../features/post-section/post-section';
+import { MainPage } from '../pages';
 
 import './styles/index.scss';
 
-function App() {
-    return (
-        <>
-            <Header />
-            <Hero />
-            <GetSection />
-            <PostSection />
-        </>
-    );
+const App = () => {
+    return(
+        <MainPage/>
+    )
 }
 
 export default App;

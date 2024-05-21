@@ -1,4 +1,5 @@
-import { UserSignUpJoiDto } from '../../../shared/constants/types/user-sign-up-joi-request-dto';
+import { type UserSignUpJoiDto } from "../../../shared";
+
 
 export const DEFAULT_SIGN_UP_PAYLOAD: UserSignUpJoiDto = {
     name: '',

@@ -1,7 +1,8 @@
-import styles from './header.module.scss';
 import clsx from 'clsx';
 import { Button } from '../../shared';
+
 import Logo from '../../assets/Logo.svg';
+import styles from './header.module.scss';
 
 export const Header = () => {
     return (

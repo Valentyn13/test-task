@@ -1,13 +1,9 @@
 import clsx from 'clsx';
 import styles from './registration-form.module.scss';
-import { Button, FileUploader, Input, RadioButton } from '../../shared';
-import { UserSignUpJoiDto } from '../../shared/constants/types/user-sign-up-joi-request-dto';
-import { Positions } from '../../shared/constants/enums/positions-enum';
-import { useAppForm } from '../../shared/lib/use-app-form/use-app-form-hook';
-import { DEFAULT_SIGN_UP_PAYLOAD } from './constants/default-sign-up-payload';
-import { userSignUpValidationShema } from './lib/user-sign-up-validation-shema';
+import { Button, FileUploader, Input, Positions, RadioButton, useAppForm, useFormFieldCreator, type UserSignUpJoiDto } from '../../../shared';
+import { DEFAULT_SIGN_UP_PAYLOAD } from '../constants/default-sign-up-payload';
+import { userSignUpValidationShema } from '../lib/user-sign-up-validation-shema';
 import { ChangeEventHandler, FC, useState } from 'react';
-import { useFormFieldCreator } from '../../shared/lib/use-form-field/use-form-field-hook';
 
 type RegistrationFormProps = {
     onSubmit: (payload: UserSignUpJoiDto) => void;
@@ -48,8 +44,8 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({
                 <Input
                     type="text"
                     placeholder="Your name"
-                    helperText='sdfsdfs'
-                    label='aaaa'
+                    helperText="sdfsdfs"
+                    label="aaaa"
                     {...useFormFieldCreator({ name: 'name', control })}
                     className={styles.registration__name}
                 />

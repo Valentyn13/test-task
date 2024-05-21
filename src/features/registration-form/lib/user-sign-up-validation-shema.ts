@@ -1,6 +1,6 @@
 import joi from 'joi';
-import { UserSignUpJoiDto } from '../../../shared/constants/types/user-sign-up-joi-request-dto';
 import { RFC2822 } from '../constants/email-regex.';
+import {type UserSignUpJoiDto } from '../../../shared';
 
 export const userSignUpValidationShema = joi.object<UserSignUpJoiDto, true>({
     name: joi.string().min(2).max(60).required(),

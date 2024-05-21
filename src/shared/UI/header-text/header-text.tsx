@@ -1,7 +1,7 @@
+import clsx from 'clsx';
 import { FC } from 'react';
 
 import styles from './header-text.module.scss';
-import clsx from 'clsx';
 
 type HeaderTextProps = {
     children: string;

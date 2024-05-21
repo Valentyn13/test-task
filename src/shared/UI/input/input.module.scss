@@ -25,15 +25,15 @@
 }
 
 .legend {
-  display: none;
-  
-  &__focused {
-    display: block !important;
-}
+    display: none;
+
+    &__focused {
+        display: block !important;
+    }
 }
 
 .input {
-    color: var( --color-black);
+    color: var(--color-black);
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
     background-color: transparent;
@@ -47,6 +47,6 @@
     padding: 0 0 0 16px;
 
     &__error {
-        color:var(--color-error);
+        color: var(--color-error);
     }
 }
