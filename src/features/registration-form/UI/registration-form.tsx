@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ChangeEventHandler, FC, useState } from 'react';
+import { ChangeEventHandler, FC, useEffect, useState } from 'react';
 
 import {
     Button,
@@ -40,12 +40,16 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({
 
     const handleFileLoad = (fileData: File) => {
         setFile(fileData);
-        console.log(file)
+        console.log(file);
     };
 
     const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         handleSubmit(onSubmit)(event);
     };
+
+    useEffect(() => {
+
+    }, []);
 
     return (
         <div className={clsx(styles.wrapper, className)}>

@@ -28,9 +28,10 @@ export class HttpApi {
         this.http = http;
     }
 
-
-    public async load(path: string, options: HttpApiOptions): Promise<Response> {
-
+    public async load(
+        path: string,
+        options: HttpApiOptions,
+    ): Promise<Response> {
         const {
             method,
             contentType,
@@ -48,9 +49,8 @@ export class HttpApi {
             withCredentials,
         });
 
-        return  response
+        return response;
     }
-
 
     private async getHeaders(
         contentType: ValueOf<typeof ContentType>,

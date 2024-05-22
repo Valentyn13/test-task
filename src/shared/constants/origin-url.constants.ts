@@ -1,4 +1,5 @@
-export const ORIGIN_URL = 'https://frontend-test-assignment-api.abz.agency/api/v';
+export const ORIGIN_URL =
+    'https://frontend-test-assignment-api.abz.agency/api/v1';
 
 // https://frontend-test-assignment-api.abz.agency/api/v1/positions (no token) (GET)
 // https://frontend-test-assignment-api.abz.agency/api/v1/token     (no token) (GET)
