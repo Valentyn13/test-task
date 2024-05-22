@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import styles from './registration-form.module.scss';
+import { ChangeEventHandler, FC, useState } from 'react';
+
 import {
     Button,
     FileUploader,
@@ -12,7 +13,8 @@ import {
 } from '../../../shared';
 import { DEFAULT_SIGN_UP_PAYLOAD } from '../constants/default-sign-up-payload';
 import { userSignUpValidationShema } from '../lib/user-sign-up-validation-shema';
-import { ChangeEventHandler, FC, useState } from 'react';
+
+import styles from './registration-form.module.scss';
 
 type RegistrationFormProps = {
     onSubmit: (payload: UserSignUpJoiDto) => void;
@@ -36,14 +38,12 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({
         setSelectedPosition(e.target.value as Positions);
     };
 
-    const handleFileLoad = (file: File) => {
-        setFile(file);
+    const handleFileLoad = (fileData: File) => {
+        setFile(fileData);
+        console.log(file)
     };
 
     const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        if (!file) {
-            return;
-        }
         handleSubmit(onSubmit)(event);
     };
 

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ButtonHTMLAttributes, FC, MouseEventHandler, ReactNode } from 'react';
 
-import { ButtonTypes } from '../../constants/enums/button-enum';
+import { ButtonTypes } from '../../constants/enums/button-types.enum';
 
 import styles from './button.module.scss';
 

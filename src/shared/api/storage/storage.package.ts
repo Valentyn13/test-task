@@ -1,5 +1,5 @@
-import { StorageKey } from '../../constants/enums/storage-key';
-import { ValueOf } from '../../constants/types/valueOf';
+import { StorageKey } from '../../constants/enums/storage-key.enum';
+import { ValueOf } from '../../constants/types/valueOf.type';
 
 export class Storage {
     private store: globalThis.Storage;

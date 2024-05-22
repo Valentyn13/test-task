@@ -1,4 +1,4 @@
-import { HttpOptions } from '../../constants/types/http-options';
+import { HttpOptions } from '../../constants/types/http-options.type';
 
 export class HTTP {
     public load(path: string, options: HttpOptions): Promise<Response> {
