@@ -5,8 +5,8 @@ import {
     Button,
     FileUploader,
     Input,
-    Positions,
-    RadioButton,
+    Preloader,
+    ReducerState,
     useAppForm,
     useFormFieldCreator,
     type UserSignUpJoiDto,
@@ -15,6 +15,8 @@ import { DEFAULT_SIGN_UP_PAYLOAD } from '../constants/default-sign-up-payload';
 import { userSignUpValidationShema } from '../lib/user-sign-up-validation-shema';
 
 import styles from './registration-form.module.scss';
+import useRadioButtonStore from '../model/radio-buttons-store';
+import { RadioButtonsList } from './radio-buttons-list/radio-buttonts-list';
 
 type RegistrationFormProps = {
     onSubmit: (payload: UserSignUpJoiDto) => void;
@@ -24,18 +26,25 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({
     onSubmit,
     className = '',
 }) => {
+    const {
+        positions,
+        state,
+        error,
+        currentSelectedPositionId,
+        setCurrentSelectedPositionId,
+        getPositions,
+    } = useRadioButtonStore();
+
     const { control, handleSubmit } = useAppForm<UserSignUpJoiDto>({
         defaultValues: DEFAULT_SIGN_UP_PAYLOAD,
         validationSchema: userSignUpValidationShema,
     });
 
-    const [selectedPosition, setSelectedPosition] = useState<Positions>(
-        Positions.FRONTEND_DEVELOPER,
-    );
     const [file, setFile] = useState<File | null>(null);
 
     const handlePositionChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-        setSelectedPosition(e.target.value as Positions);
+        const { value } = e.target;
+        setCurrentSelectedPositionId(Number(value));
     };
 
     const handleFileLoad = (fileData: File) => {
@@ -48,8 +57,8 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({
     };
 
     useEffect(() => {
-
-    }, []);
+        void getPositions();
+    }, [getPositions]);
 
     return (
         <div className={clsx(styles.wrapper, className)}>
@@ -80,34 +89,27 @@ export const RegistrationForm: FC<RegistrationFormProps> = ({
                     <p className={styles.registration__radio_topic}>
                         Select your position
                     </p>
-                    <RadioButton
-                        value={Positions.FRONTEND_DEVELOPER}
-                        onChange={handlePositionChange}
-                        checked={
-                            selectedPosition === Positions.FRONTEND_DEVELOPER
-                        }
-                        label={Positions.FRONTEND_DEVELOPER}
-                    />
-                    <RadioButton
-                        value={Positions.BACKEND_DEVELOPER}
-                        onChange={handlePositionChange}
-                        checked={
-                            selectedPosition === Positions.BACKEND_DEVELOPER
-                        }
-                        label={Positions.BACKEND_DEVELOPER}
-                    />
-                    <RadioButton
-                        value={Positions.DESIGNER}
-                        onChange={handlePositionChange}
-                        checked={selectedPosition === Positions.DESIGNER}
-                        label={Positions.DESIGNER}
-                    />
-                    <RadioButton
-                        value={Positions.QA}
-                        onChange={handlePositionChange}
-                        checked={selectedPosition === Positions.QA}
-                        label={Positions.QA}
-                    />
+                    {state === ReducerState.PENDING && (
+                        <div className={styles.registration__preloaderLayout}>
+                            <Preloader />
+                        </div>
+                    )}
+
+                    {state === ReducerState.SUCCESS && (
+                        <RadioButtonsList
+                            onRadioButtonClick={handlePositionChange}
+                            posiions={positions}
+                            selectedPositionId={currentSelectedPositionId}
+                        />
+                    )}
+
+                    {state === ReducerState.ERROR && (
+                        <div className={styles.registration__preloaderLayout}>
+                            <p className={styles.registration__errorText}>
+                                Avaliable positons not found
+                            </p>
+                        </div>
+                    )}
                 </div>
 
                 <FileUploader

@@ -21,6 +21,17 @@
         margin: 0 0 50px;
     }
 
+    &__preloaderLayout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 132px;
+    }
+
+    &__errorText {
+        color: var(--color-error)
+    }
+
     &__radio {
         margin: 0 0 47px;
 

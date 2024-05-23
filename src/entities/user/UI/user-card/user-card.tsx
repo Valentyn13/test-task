@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { User, Avatar } from '../../shared/index.ts';
+import { User, Avatar } from '../../../../shared/index.ts';
 
 import styles from './user-card.module.scss';
 
